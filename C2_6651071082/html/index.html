@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- Bước 3: Khai báo DOCTYPE và Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trang cá nhân của Trần Vũ Thanh Triển - sinh viên năm 2 ngành CNTT tại UTC2, giới thiệu bản thân, kỹ năng, dự án và hành trình học tập.">
+    <title>Blog Cá Nhân | Trần Vũ Thanh Triển</title>
+    <!-- Liên kết file CSS chuẩn thư mục tương đối -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Icon FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Thanh tiến trình đọc trang (tính năng mới) -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Bước 4: HEADER & NAVIGATION STICKY -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo-text">TVT<span>.Dev</span></a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link">Trang chủ</a>
+                <a href="#about" class="nav-link">Giới thiệu</a>
+                <a href="#skills" class="nav-link">Kỹ năng</a>
+                <a href="#projects" class="nav-link">Dự án</a>
+                <a href="#journey" class="nav-link">Hành trình</a>
+                <a href="#blog" class="nav-link">Bài viết</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- TÍNH NĂNG MỚI: chuyển giao diện sáng/tối -->
+                <button id="themeToggle" class="theme-toggle" aria-label="Chuyển giao diện sáng/tối">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <!-- TÍNH NĂNG MỚI: menu di động -->
+                <button id="navToggle" class="nav-toggle" aria-label="Mở menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bước 5: HERO SECTION -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="greeting">Xin chào! Mình là</p>
+                <h1 class="animated-name">Trần Vũ Thanh Triển</h1>
+                <p class="bio-intro">Sinh viên năm 2 ngành Công nghệ Thông tin tại UTC2, đam mê thiết kế giao diện Web hiện đại, mượt mà và tối ưu trải nghiệm người dùng.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary-btn">Xem Hồ Sơ</a>
+                    <a href="#footer" class="btn secondary-btn">Liên Hệ Tôi</a>
+                </div>
+            </div>
+            <div class="hero-avatar">
+                <img src="../images/avt.jpg" alt="Ảnh chân dung Trần Vũ Thanh Triển">
+            </div>
+        </div>
+        <a href="#about" class="scroll-hint" aria-label="Cuộn xuống"><i class="fa-solid fa-chevron-down"></i></a>
+    </section>
+
+    <!-- Bước 6: SECTION GIỚI THIỆU BẢN THÂN -->
+    <section id="about" class="about-section container">
+        <h2 class="section-title">Giới Thiệu Bản Thân</h2>
+        <div class="about-content">
+            <p>Hiện tại, mình đang là sinh viên năm 2 ngành <strong>Công nghệ Thông tin</strong> (MSSV: 6651071082) tại <em>Phân hiệu Trường Đại học Giao thông Vận tải tại TP. Hồ Chí Minh (UTC2)</em>. Với định hướng trở thành một <strong>Frontend Developer chuyên nghiệp</strong>, mình không ngừng trau dồi các kiến thức về <span>HTML5, CSS3, JavaScript, ReactJS</span> và tư duy thiết kế giao diện UI/UX.</p>
+        </div>
+
+        <!-- TÍNH NĂNG MỚI: vài số liệu nổi bật -->
+        <div class="stats-grid">
+            <div class="stat-item"><strong data-count="12">0</strong><span>Dự án đã làm</span></div>
+            <div class="stat-item"><strong data-count="2">0</strong><span>Năm học tại UTC2</span></div>
+            <div class="stat-item"><strong data-count="8">0</strong><span>Công nghệ sử dụng</span></div>
+        </div>
+    </section>
+
+    <!-- Bước 7: SECTION KỸ NĂNG / CÔNG CỤ (Pill Badge Tags) -->
+    <section id="skills" class="skills-section container">
+        <h2 class="section-title">Kỹ Năng & Công Cụ</h2>
+        <div class="skills-grid">
+            <span class="skill-tag">HTML5 / CSS3</span>
+            <span class="skill-tag">JavaScript (ES6+)</span>
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Responsive Design</span>
+            <span class="skill-tag">Git / GitHub</span>
+            <span class="skill-tag">Figma UI/UX</span>
+            <span class="skill-tag">SASS / SCSS</span>
+            <span class="skill-tag">Bootstrap 5</span>
+        </div>
+    </section>
+
+    <!-- Bước 8: SECTION DỰ ÁN / HOẠT ĐỘNG NỔI BẬT -->
+    <section id="projects" class="projects-section container">
+        <h2 class="section-title">Dự Án Nổi Bật</h2>
+        <div class="projects-grid">
+            <article class="project-card">
+                <div class="card-img">
+                    <img src="../images/banhang.jpg" alt="Website Quán Cà Phê" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Website Thực Đơn Quán Cà Phê</h3>
+                    <p>Giao diện giới thiệu thực đơn quán cà phê sang trọng, xây dựng trên HTML5 chuẩn semantic và hiệu ứng CSS3 mượt mà.</p>
+                    <button class="read-more" data-modal="modal-coffee">Xem chi tiết &rarr;</button>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="card-img">
+                    <img src="../images/map.jpg" alt="Ứng dụng TodoList" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Bản Đồ Tìm Đường Thông Minh</h3>
+                    <p>Ứng dụng hỗ trợ tìm tuyến đường ngắn nhất trong khuôn viên trường học, tích hợp giao diện chọn điểm đến trực quan.</p>
+                    <button class="read-more" data-modal="modal-todo">Xem chi tiết &rarr;</button>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="card-img">
+                    <img src="../images/blog.jpg" alt="Blog cá nhân" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Blog Cá Nhân Trần Vũ Thanh Triển</h3>
+                    <p>Trang giới thiệu bản thân với hiệu ứng chuyển động mượt, chế độ sáng/tối và bố cục responsive hoàn chỉnh.</p>
+                    <button class="read-more" data-modal="modal-blog">Xem chi tiết &rarr;</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Bước 9: SECTION HÀNH TRÌNH / DÒNG THỜI GIAN (My Journey) -->
+    <section id="journey" class="journey-section container">
+        <h2 class="section-title">Hành Trình & Cột Mốc</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="date">2025 - Hiện tại</span>
+                    <h3>Sinh viên Công nghệ Thông tin tại UTC2</h3>
+                    <p>Nhập học ngành Công nghệ Thông tin (MSSV: 6651071082), theo học chương trình cử nhân, tập trung vào lập trình web, cấu trúc dữ liệu và giải thuật.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="date">2026</span>
+                    <h3>Sinh Viên Năm 2</h3>
+                    <p>Bắt đầu đi sâu vào các môn chuyên ngành, chủ động xây dựng các dự án cá nhân như website này để rèn luyện HTML5, CSS3 và JavaScript.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="date">Định hướng sắp tới</span>
+                    <h3>Thực Tập Sinh Frontend</h3>
+                    <p>Mục tiêu tìm kiếm cơ hội thực tập để áp dụng kiến thức vào các dự án thực tế tại doanh nghiệp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bước 10: SECTION BÀI VIẾT & ASIDE -->
+    <section id="blog" class="blog-layout container">
+        <main class="blog-articles">
+            <h2 class="section-title" style="text-align: left;">Bài Viết Mới Nhất</h2>
+
+            <article class="blog-card">
+                <span class="blog-date">12/09/2026</span>
+                <h3>Cốt lõi để làm chủ CSS Grid & Flexbox trong năm 2026</h3>
+                <p>Tổng hợp kinh nghiệm thực tế giúp dàn trang nhanh chóng, không bị vỡ layout trên mọi thiết bị màn hình...</p>
+                <button class="read-more" data-modal="modal-post1">Đọc thêm &rarr;</button>
+            </article>
+
+            <article class="blog-card">
+                <span class="blog-date">02/08/2026</span>
+                <h3>5 mẹo tối ưu hiệu năng JavaScript cho người mới</h3>
+                <p>Những thói quen nhỏ giúp trang web chạy nhẹ hơn: debounce, lazy-load, tránh reflow không cần thiết...</p>
+                <button class="read-more" data-modal="modal-post2">Đọc thêm &rarr;</button>
+            </article>
+
+            <article class="blog-card">
+                <span class="blog-date">15/06/2026</span>
+                <h3>Vì sao mình chọn thiết kế Dark Mode làm mặc định</h3>
+                <p>Chia sẻ góc nhìn cá nhân về trải nghiệm người dùng, độ tương phản và cách chọn bảng màu phù hợp...</p>
+                <button class="read-more" data-modal="modal-post3">Đọc thêm &rarr;</button>
+            </article>
+        </main>
+
+        <aside class="blog-aside">
+            <h3>Kết Nối Với Tôi</h3>
+            <p>Rất vui được kết nối và chia sẻ kiến thức cùng mọi người!</p>
+            <div class="aside-socials">
+                <a href="mailto:tranvuthanhtrien@gmail.com"><i class="fa-solid fa-envelope"></i> tranvuthanhtrien@gmail.com</a>
+                <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            </div>
+
+            <!-- TÍNH NĂNG MỚI: đăng ký nhận tin -->
+            <form class="newsletter-form" id="newsletterForm">
+                <h4>Đăng ký nhận bài viết mới</h4>
+                <input type="email" id="newsletterEmail" placeholder="Email của bạn" required>
+                <button type="submit" class="btn primary-btn btn-full">Đăng ký</button>
+                <p class="form-feedback" id="newsletterFeedback" role="status"></p>
+            </form>
+        </aside>
+    </section>
+
+    <!-- Bước 11: FOOTER -->
+    <footer id="footer" class="site-footer">
+        <div class="footer-container">
+            <div class="social-footer">
+                <a href="mailto:tranvuthanhtrien@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Trần Vũ Thanh Triển. All rights reserved.</p>
+            <a href="#hero" class="back-to-top"><i class="fa-solid fa-arrow-up"></i> Về đầu trang</a>
+        </div>
+    </footer>
+
+    <!-- TÍNH NĂNG MỚI: modal chi tiết (dùng chung cho dự án & bài viết) -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" id="modalClose" aria-label="Đóng">&times;</button>
+            <h3 id="modalTitle"></h3>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

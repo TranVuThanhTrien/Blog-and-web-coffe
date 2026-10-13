@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thực đơn phong phú của The Cozy Bean - Cà phê, trà trái cây và bánh ngọt hảo hạng.">
+    <title>The Cozy Bean - Thực Đơn Quán Cà Phê</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- FontAwesome hỗ trợ icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- 3. HEADER -->
+    <header class="site-header" id="trang-chu">
+        <div class="header-content">
+            <!-- Logo vẽ bằng icon thay cho ảnh logo.png bị thiếu -->
+            <div class="logo" aria-hidden="true"><i class="fa-solid fa-mug-hot"></i></div>
+            <h1 class="brand-name">THE COZY BEAN</h1>
+            <p class="slogan">Tận hưởng từng phút giây lắng đọng cùng hương vị cà phê đậm đà</p>
+        </div>
+    </header>
+
+    <!-- 4. NAVIGATION -->
+    <nav class="main-nav">
+        <div class="nav-inner">
+            <button class="nav-toggle" id="navToggle" aria-label="Mở menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul id="navList">
+                <li><a href="#trang-chu" class="nav-link"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+                <li><a href="#thuc-don" class="nav-link"><i class="fa-solid fa-mug-hot"></i> Thực đơn</a></li>
+                <li><a href="#khuyen-mai" class="nav-link"><i class="fa-solid fa-tag"></i> Khuyến mãi</a></li>
+                <li><a href="#lien-he" class="nav-link"><i class="fa-solid fa-phone"></i> Liên hệ</a></li>
+            </ul>
+            <!-- TÍNH NĂNG MỚI: nút giỏ hàng -->
+            <button class="cart-btn" id="cartBtn" aria-label="Xem giỏ hàng">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- BỐ CỤC CHÍNH (MAIN CONTENT + ASIDE) -->
+    <div class="container main-wrapper">
+
+        <!-- NỘI DUNG CHÍNH (5. & 6. SECTION & ARTICLE) -->
+        <main class="menu-content" id="thuc-don">
+            <div class="section-title-wrapper">
+                <h2 class="main-title">Khám Phá Hương Vị</h2>
+            </div>
+
+            <!-- TÍNH NĂNG MỚI: thanh tìm kiếm + lọc theo danh mục -->
+            <div class="menu-tools">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" id="searchInput" placeholder="Tìm món (ví dụ: latte, trà sen...)" aria-label="Tìm món">
+                </div>
+                <div class="filter-tabs" id="filterTabs">
+                    <button class="filter-tab active" data-filter="all">Tất cả</button>
+                    <button class="filter-tab" data-filter="cafe">Cà phê</button>
+                    <button class="filter-tab" data-filter="tra">Trà trái cây</button>
+                    <button class="filter-tab" data-filter="banh">Bánh ngọt</button>
+                </div>
+            </div>
+
+            <p class="empty-state" id="emptyState" hidden>Không tìm thấy món phù hợp. Hãy thử từ khóa khác.</p>
+
+            <!-- SECTION 1: CÀ PHÊ -->
+            <section class="menu-section" data-category="cafe">
+                <h2 class="category-title">Cà Phê Truyền Thống & Pha Máy</h2>
+                <div class="product-grid">
+                    <article class="food-card" data-name="cà phê muối cozy" data-price="29000">
+                       <img src="../images/cfmuoi.jpg" alt="Cà Phê Muối Cozy">
+                        <h3>Cà Phê Muối Cozy</h3>
+                        <p>Hương vị đậm đà kết hợp lớp kem muối béo ngậy đặc trưng.</p>
+                        <div class="card-footer">
+                            <span class="price">29.000đ</span>
+                            <button class="btn-order" data-name="Cà Phê Muối Cozy" data-price="29000">Đặt món</button>
+                        </div>
+                    </article>
+
+                    <article class="food-card" data-name="bạc xỉu espresso" data-price="32000">
+                        <img src="../images/bacsiu.jpg" alt="Bạc Xỉu Espresso" loading="lazy">
+                        <h3>Bạc Xỉu Espresso</h3>
+                        <p>Sự hòa quyện ngọt ngào giữa sữa đặc và cà phê nguyên chất.</p>
+                        <div class="card-footer">
+                            <span class="price">32.000đ</span>
+                            <button class="btn-order" data-name="Bạc Xỉu Espresso" data-price="32000">Đặt món</button>
+                        </div>
+                    </article>
+
+                    <article class="food-card" data-name="latte hạt dẻ nướng" data-price="45000">
+                        <img src="../images/hatde.jpg" alt="Latte Hạt Dẻ Nướng" loading="lazy">
+                        <h3>Latte Hạt Dẻ Nướng</h3>
+                        <p>Cà phê Ý thơm mịn kết hợp xốt hạt dẻ nướng nồng nà.</p>
+                        <div class="card-footer">
+                            <span class="price">45.000đ</span>
+                            <button class="btn-order" data-name="Latte Hạt Dẻ Nướng" data-price="45000">Đặt món</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- SECTION 2: TRÀ TRÁI CÂY -->
+            <section class="menu-section" data-category="tra">
+                <h2 class="category-title">Trà Trái Cây & Macchiato Thanh Nhã</h2>
+                <div class="product-grid">
+                    <article class="food-card" data-name="trà ô long dâu tằm" data-price="42000">
+                        <img src="../images/tradautam.jpg" alt="Trà Ô Long Dâu Tằm" loading="lazy">
+                        <h3>Trà Ô Long Dâu Tằm</h3>
+                        <p>Vị thanh mát của trà ô long cùng mứt dâu tằm chua ngọt.</p>
+                        <div class="card-footer">
+                            <span class="price">42.000đ</span>
+                            <button class="btn-order" data-name="Trà Ô Long Dâu Tằm" data-price="42000">Đặt món</button>
+                        </div>
+                    </article>
+
+                    <article class="food-card" data-name="trà sen mãng cầu" data-price="45000">
+                        <img src="../images/trasen.jpg" alt="Trà Sen Mãng Cầu" loading="lazy">
+                        <h3>Trà Sen Mãng Cầu</h3>
+                        <p>Sự kết hợp độc đáo mang lại cảm giác thanh mát sảng khoái.</p>
+                        <div class="card-footer">
+                            <span class="price">45.000đ</span>
+                            <button class="btn-order" data-name="Trà Sen Mãng Cầu" data-price="45000">Đặt món</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- SECTION 3: BÁNH NGỌT -->
+            <section class="menu-section" data-category="banh">
+                <h2 class="category-title">Bánh Ngọt & Tráng Miệng Thủ Công</h2>
+                <div class="product-grid">
+                    <article class="food-card" data-name="tiramisu cacao" data-price="38000">
+                        <img src="../images/tiramisu.jpg" alt="Tiramisu Cacao" loading="lazy">
+                        <h3>Tiramisu Cacao</h3>
+                        <p>Mềm mịn, thơm nồng vị cà phê cùng chút đắng nhẹ của cacao.</p>
+                        <div class="card-footer">
+                            <span class="price">38.000đ</span>
+                            <button class="btn-order" data-name="Tiramisu Cacao" data-price="38000">Đặt món</button>
+                        </div>
+                    </article>
+
+                    <article class="food-card" data-name="croissant bơ tươi" data-price="32000">
+                        <img src="../images/banh.jpg" alt="Croissant Bơ Tươi" loading="lazy">
+                        <h3>Croissant Bơ Tươi</h3>
+                        <p>Bánh sừng bò ngàn lớp xốp giòn thơm lừng vị bơ Pháp.</p>
+                        <div class="card-footer">
+                            <span class="price">32.000đ</span>
+                            <button class="btn-order" data-name="Croissant Bơ Tươi" data-price="32000">Đặt món</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- 7. ASIDE -->
+        <aside class="sidebar" id="khuyen-mai">
+            <div class="aside-box popular-items">
+                <h3 class="aside-title">Món Hot Trong Tuần</h3>
+                <ul>
+                    <li>
+                        <img src="../images/cfmuoi.jpg" alt="Cà Phê Muối" loading="lazy">
+                        <div>
+                            <h4>Cà Phê Muối Cozy</h4>
+                            <span class="hot-badge">Top 1 Seller</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../images/tiramisu.jpg" alt="Tiramisu" loading="lazy">
+                        <div>
+                            <h4>Tiramisu Cacao</h4>
+                            <span class="hot-badge">Yêu thích</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="aside-box promo-box">
+                <h3 class="aside-title">Ưu Đãi Đặc Biệt</h3>
+                <p>Giảm ngay 20% cho đơn hàng thứ 2 trong khung giờ 14:00 - 17:00 hàng ngày!</p>
+                <!-- TÍNH NĂNG MỚI: đồng hồ đếm ngược -->
+                <div class="promo-timer" id="promoTimer" aria-live="polite">
+                    <i class="fa-regular fa-clock"></i> <span id="promoTimerText">Đang tính giờ...</span>
+                </div>
+            </div>
+
+            <!-- TÍNH NĂNG MỚI: form đặt bàn nhanh -->
+            <div class="aside-box">
+                <h3 class="aside-title">Đặt Bàn Nhanh</h3>
+                <form id="bookingForm" class="booking-form" novalidate>
+                    <label for="bkName">Họ tên</label>
+                    <input type="text" id="bkName" name="bkName" required placeholder="Nguyễn Văn A">
+
+                    <label for="bkPhone">Số điện thoại</label>
+                    <input type="tel" id="bkPhone" name="bkPhone" required pattern="[0-9]{9,11}" placeholder="09xxxxxxxx">
+
+                    <label for="bkTime">Thời gian đến</label>
+                    <input type="datetime-local" id="bkTime" name="bkTime" required>
+
+                    <label for="bkGuests">Số khách</label>
+                    <input type="number" id="bkGuests" name="bkGuests" min="1" max="20" value="2" required>
+
+                    <button type="submit" class="btn-order btn-full">Gửi yêu cầu đặt bàn</button>
+                    <p class="form-feedback" id="bookingFeedback" role="status"></p>
+                </form>
+            </div>
+        </aside>
+    </div>
+
+    <!-- 8. FOOTER -->
+    <footer class="site-footer" id="lien-he">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3><i class="fa-regular fa-clock"></i> GIỜ MỞ CỬA</h3>
+                <p>Thứ 2 - Thứ 6: 07:00 - 22:30</p>
+                <p>Thứ 7 - Chủ Nhật: 07:00 - 23:00</p>
+            </div>
+            <div class="footer-col">
+                <h3><i class="fa-solid fa-location-dot"></i> THÔNG TIN LIÊN HỆ</h3>
+                <p>Địa chỉ: TP HCM</p>
+                <p>Hotline: 0900000000</p>
+                <p>Email: tranvuthanhtrien@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h3>KẾT NỐI VỚI CHÚNG TÔI</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 The Cozy Bean Coffee. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- TÍNH NĂNG MỚI: khay giỏ hàng trượt ra -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Giỏ hàng">
+        <div class="cart-header">
+            <h3>Giỏ hàng của bạn</h3>
+            <button id="cartClose" aria-label="Đóng giỏ hàng"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="cart-items" id="cartItems"></ul>
+        <p class="cart-empty" id="cartEmpty">Giỏ hàng đang trống. Hãy thêm món bạn thích!</p>
+        <div class="cart-footer">
+            <div class="cart-total"><span>Tổng cộng</span><strong id="cartTotal">0đ</strong></div>
+            <button class="btn-order btn-full" id="cartCheckout">Xác nhận đặt món</button>
+        </div>
+    </aside>
+
+    <!-- TÍNH NĂNG MỚI: nút lên đầu trang -->
+    <button id="backToTop" class="back-to-top" aria-label="Lên đầu trang"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- TÍNH NĂNG MỚI: thông báo nhỏ (toast) -->
+    <div class="toast" id="toast"></div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
